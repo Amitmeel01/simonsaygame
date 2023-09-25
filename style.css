@@ -1,0 +1,49 @@
+.box{
+    width: 150px;
+    height: 150px;
+    margin-left: 20px;
+    border: 6px solid black;
+    border-radius: 30px;
+
+}
+.line-one{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+
+}
+.red{
+    background: red;
+}
+.yellow{
+    background: orange;
+}
+.blue{
+    background-color: blue;
+}
+.purple{
+    background: purple;
+}
+
+.line-two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    
+    }
+    h1,h2{
+        text-align: center;
+        font-weight: bold;
+    }
+    .flash{
+        background-color: white;
+    }
+    .userflash{
+        background: green;
+    }
+    .body{
+        background: red;
+    }
+
