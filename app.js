@@ -92,7 +92,7 @@ function cheakans(idx){
  }
  else{
     h2.innerText=`Game Over !! your score was  ${level-1}
-     press start button to restart`;
+     press restart button to start`;
      document.querySelector("body").style.backgroundColor="red";
      setTimeout(function(){
         document.querySelector("body").style.background="white";
