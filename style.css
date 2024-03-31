@@ -47,3 +47,38 @@ margin-top: 20px;
         background: red;
     }
 
+   .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 4rem;
+   }
+    .start{
+        margin-left: 43rem;
+        margin-top:4rem;
+        transform: scale(1.8);
+        /* transform: translateX(50%); */
+        cursor: pointer;
+        background: green;
+        color: white;
+    }
+    .restart{
+        margin-left: 3rem;
+        transform: scale(1.6);
+        /* transform: translateX(50%); */
+        cursor: pointer;
+        background: green;
+        color: white;
+    }
+    @media (max-width:500px){
+        .start{
+            margin-left: 8.5rem;
+            margin-top:2rem;
+          
+          
+        }
+        .restart{
+            margin-left: 3rem;
+        }
+    }

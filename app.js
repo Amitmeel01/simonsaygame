@@ -5,15 +5,31 @@ let btns=["red","blue","yellow","purple"];
 let started=false;
 let level=0;
 let h2=document.querySelector("h2");
+let start=document.querySelector(".start");
+// let stop=document.querySelector(".btn .stop");
+let restart=document.querySelector(".restart");
 
-document.addEventListener("keypress",function(){
+
+start.addEventListener("click",()=>{
     if(started==false){
         console.log("game is started");
         started=true;
 
         levelup();
-    } 
-});
+    }
+    
+})
+
+
+//orignal
+// document.addEventListener("keypress",function(){
+//     if(started==false){
+//         console.log("game is started");
+//         started=true;
+
+//         levelup();
+//     } 
+// });
 
 
 function btnFlash(btn){
@@ -76,7 +92,7 @@ function cheakans(idx){
  }
  else{
     h2.innerText=`Game Over !! your score was  ${level-1}
-     press any key to start`;
+     press start button to restart`;
      document.querySelector("body").style.backgroundColor="red";
      setTimeout(function(){
         document.querySelector("body").style.background="white";
@@ -90,11 +106,41 @@ function cheakans(idx){
  }
 }
 
-function reset(){
-    started==false;
-    gameseq=[];
-    userseq=[];
-    level=0;
+
+// function reset(){
+//     started==false;
+//     gameseq=[];
+//     userseq=[];
+//     level=0;
     
+
+    
+// }
+
+
+
+
+function reset() {
+    started = false; // Use assignment operator to set started back to false
+    gameseq = [];
+    userseq = [];
+    level = 0;
+
+    // Call the renamed function to attach the event listener again
+    attachRestartListener();
 }
+
+function attachRestartListener() {
+    restart.addEventListener("click", () => {
+        if (started == false) {
+            console.log("game is started");
+            started = true;
+
+            levelup();
+        }
+    });
+}
+
+// Call the function to attach the event listener initially
+attachRestartListener();
 
